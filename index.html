@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_975d8d8903af879ab93b1d5b5c044fe5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_975d8d8903af879ab93b1d5b5c044fe5" ></div>
+        
+    
+            
+<div style="position: fixed; 
+            bottom: 20px; left: 20px; width: 210px; z-index:9999; font-size:14px;
+            background: white; padding:10px; border:1px solid #888; border-radius:8px;">
+<b>Legend</b><br>
+<span style="display:inline-block;width:12px;height:12px;background:#2A81CB;margin-right:6px;"></span> Airports (Blue)<br>
+<span style="display:inline-block;width:12px;height:12px;background:#CB2B3E;margin-right:6px;"></span> Legoland (Red)<br>
+<span style="display:inline-block;width:12px;height:12px;background:#E07B39;margin-right:6px;"></span> Lakeland (Orange)<br>
+<span style="display:inline-block;width:12px;height:12px;background:#2AAD27;margin-right:6px;"></span> Tampa (Green)<br>
+</div>
+
+            
+</body>
+<script>
+    
+    
+            var map_975d8d8903af879ab93b1d5b5c044fe5 = L.map(
+                "map_975d8d8903af879ab93b1d5b5c044fe5",
+                {
+                    center: [28.05, -82.05],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eb6b0614cdeb2b3d13906e74e1b3119d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var marker_d7c1f5bf884397233295ce78d23dd0a6 = L.marker(
+                [28.4312, -81.3081],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_2c25826cfb2e954d241e4321b5afa2f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d7c1f5bf884397233295ce78d23dd0a6.setIcon(icon_2c25826cfb2e954d241e4321b5afa2f8);
+        
+    
+        var popup_1817ff72129583b71744eab235b53be6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11a0ff6ee44042aaaeba1d53fc096730 = $(`<div id="html_11a0ff6ee44042aaaeba1d53fc096730" style="width: 100.0%; height: 100.0%;"><b>Orlando International Airport (MCO)</b><br><i>Category:</i> Airport</div>`)[0];
+            popup_1817ff72129583b71744eab235b53be6.setContent(html_11a0ff6ee44042aaaeba1d53fc096730);
+        
+
+        marker_d7c1f5bf884397233295ce78d23dd0a6.bindPopup(popup_1817ff72129583b71744eab235b53be6)
+        ;
+
+        
+    
+    
+            marker_d7c1f5bf884397233295ce78d23dd0a6.bindTooltip(
+                `<div>
+                     Orlando International Airport (MCO)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a06dc614e15ac0040bb671b9c3d44a88 = L.marker(
+                [27.9755, -82.5332],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_803c9a59377eced9efaac22d6a00d6c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a06dc614e15ac0040bb671b9c3d44a88.setIcon(icon_803c9a59377eced9efaac22d6a00d6c0);
+        
+    
+        var popup_11d73ce7b03080ee085b1f3b4de44817 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a29da95f0976bdebabcb4a48ca490bd = $(`<div id="html_7a29da95f0976bdebabcb4a48ca490bd" style="width: 100.0%; height: 100.0%;"><b>Tampa International Airport (TPA)</b><br><i>Category:</i> Airport</div>`)[0];
+            popup_11d73ce7b03080ee085b1f3b4de44817.setContent(html_7a29da95f0976bdebabcb4a48ca490bd);
+        
+
+        marker_a06dc614e15ac0040bb671b9c3d44a88.bindPopup(popup_11d73ce7b03080ee085b1f3b4de44817)
+        ;
+
+        
+    
+    
+            marker_a06dc614e15ac0040bb671b9c3d44a88.bindTooltip(
+                `<div>
+                     Tampa International Airport (TPA)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_005f1c14b2b4b6c7ce9f4873fee4c7d6 = L.marker(
+                [27.9891, -81.6901],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_7a3d4f5a16031052e421d1a02ca2223f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_005f1c14b2b4b6c7ce9f4873fee4c7d6.setIcon(icon_7a3d4f5a16031052e421d1a02ca2223f);
+        
+    
+        var popup_bdff5aea0c4525c0b5af07503c3a2c69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d3d0e2a81a8c04b9f56e7bd7fdf1d26 = $(`<div id="html_4d3d0e2a81a8c04b9f56e7bd7fdf1d26" style="width: 100.0%; height: 100.0%;"><b>Legoland Florida (Winter Haven)</b><br><i>Category:</i> Legoland<br>Orlando International Airport (MCO): ≈ 1 hr 15 min<br>Tampa International Airport (TPA): ≈ 1 hr 5 min</div>`)[0];
+            popup_bdff5aea0c4525c0b5af07503c3a2c69.setContent(html_4d3d0e2a81a8c04b9f56e7bd7fdf1d26);
+        
+
+        marker_005f1c14b2b4b6c7ce9f4873fee4c7d6.bindPopup(popup_bdff5aea0c4525c0b5af07503c3a2c69)
+        ;
+
+        
+    
+    
+            marker_005f1c14b2b4b6c7ce9f4873fee4c7d6.bindTooltip(
+                `<div>
+                     Legoland Florida (Winter Haven)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_df15c2b489f74f25178365934b806c89 = L.marker(
+                [28.0522, -81.9565],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_138583f4bbfcb2fefe58565e7e2deec0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_df15c2b489f74f25178365934b806c89.setIcon(icon_138583f4bbfcb2fefe58565e7e2deec0);
+        
+    
+        var popup_60ab3e40cb0f2b9d2bfd11039af67e39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0bab891ca65560a2f6bb9263f628f6bc = $(`<div id="html_0bab891ca65560a2f6bb9263f628f6bc" style="width: 100.0%; height: 100.0%;"><b>Florida Children's Museum (Lakeland)</b><br><i>Category:</i> Lakeland<br>Orlando International Airport (MCO): ≈ 1 hr</div>`)[0];
+            popup_60ab3e40cb0f2b9d2bfd11039af67e39.setContent(html_0bab891ca65560a2f6bb9263f628f6bc);
+        
+
+        marker_df15c2b489f74f25178365934b806c89.bindPopup(popup_60ab3e40cb0f2b9d2bfd11039af67e39)
+        ;
+
+        
+    
+    
+            marker_df15c2b489f74f25178365934b806c89.bindTooltip(
+                `<div>
+                     Florida Children's Museum (Lakeland)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2822368589b266e6be5e94c6eb42f033 = L.marker(
+                [28.0563, -81.9752],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_ad3d6dbe16a407764e439b6b45113a44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_2822368589b266e6be5e94c6eb42f033.setIcon(icon_ad3d6dbe16a407764e439b6b45113a44);
+        
+    
+        var popup_d9333e7314c16e137f3b00d74dad4a7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36c7af47b17fd3b067550d4ab87c5dd5 = $(`<div id="html_36c7af47b17fd3b067550d4ab87c5dd5" style="width: 100.0%; height: 100.0%;"><b>Bonnet Springs Park (Lakeland)</b><br><i>Category:</i> Lakeland<br>Orlando International Airport (MCO): ≈ 1 hr 5 min</div>`)[0];
+            popup_d9333e7314c16e137f3b00d74dad4a7c.setContent(html_36c7af47b17fd3b067550d4ab87c5dd5);
+        
+
+        marker_2822368589b266e6be5e94c6eb42f033.bindPopup(popup_d9333e7314c16e137f3b00d74dad4a7c)
+        ;
+
+        
+    
+    
+            marker_2822368589b266e6be5e94c6eb42f033.bindTooltip(
+                `<div>
+                     Bonnet Springs Park (Lakeland)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4303fe84dc8c3303bcb5820b7bab8cf2 = L.marker(
+                [28.1878, -82.0847],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_0ee52d8f19ead1dc1a2adeef6f7a0fe5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_4303fe84dc8c3303bcb5820b7bab8cf2.setIcon(icon_0ee52d8f19ead1dc1a2adeef6f7a0fe5);
+        
+    
+        var popup_75a0a9d7630c073b2b866981a82697c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a113778bec989086e7cedff0384ec5b = $(`<div id="html_8a113778bec989086e7cedff0384ec5b" style="width: 100.0%; height: 100.0%;"><b>Safari Wilderness Ranch (Lakeland area)</b><br><i>Category:</i> Lakeland</div>`)[0];
+            popup_75a0a9d7630c073b2b866981a82697c0.setContent(html_8a113778bec989086e7cedff0384ec5b);
+        
+
+        marker_4303fe84dc8c3303bcb5820b7bab8cf2.bindPopup(popup_75a0a9d7630c073b2b866981a82697c0)
+        ;
+
+        
+    
+    
+            marker_4303fe84dc8c3303bcb5820b7bab8cf2.bindTooltip(
+                `<div>
+                     Safari Wilderness Ranch (Lakeland area)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e25a8a3c2a2f506fdaf228780c7f8ea1 = L.marker(
+                [27.9887, -82.0206],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_d2ba9fbbf7f332fda6d7940d3072e3a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e25a8a3c2a2f506fdaf228780c7f8ea1.setIcon(icon_d2ba9fbbf7f332fda6d7940d3072e3a2);
+        
+    
+        var popup_5443d0769dfbb0350f73d6bb905f6bbc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74c81e6aa3c0ffcf04a8a6773967e3e7 = $(`<div id="html_74c81e6aa3c0ffcf04a8a6773967e3e7" style="width: 100.0%; height: 100.0%;"><b>Florida Air Museum (Lakeland)</b><br><i>Category:</i> Lakeland</div>`)[0];
+            popup_5443d0769dfbb0350f73d6bb905f6bbc.setContent(html_74c81e6aa3c0ffcf04a8a6773967e3e7);
+        
+
+        marker_e25a8a3c2a2f506fdaf228780c7f8ea1.bindPopup(popup_5443d0769dfbb0350f73d6bb905f6bbc)
+        ;
+
+        
+    
+    
+            marker_e25a8a3c2a2f506fdaf228780c7f8ea1.bindTooltip(
+                `<div>
+                     Florida Air Museum (Lakeland)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6dcee75a8fce619127b56031f75b993b = L.marker(
+                [27.9491, -82.461],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_208ee835dddbd3fdb11f77da323874ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6dcee75a8fce619127b56031f75b993b.setIcon(icon_208ee835dddbd3fdb11f77da323874ad);
+        
+    
+        var popup_085b0cfcf68a533771038d147aff53ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6c20bbc6febc21210f77635242a3b32 = $(`<div id="html_f6c20bbc6febc21210f77635242a3b32" style="width: 100.0%; height: 100.0%;"><b>Glazer Children's Museum (Tampa)</b><br><i>Category:</i> Tampa<br>Tampa International Airport (TPA): ≈ 15–20 min</div>`)[0];
+            popup_085b0cfcf68a533771038d147aff53ff.setContent(html_f6c20bbc6febc21210f77635242a3b32);
+        
+
+        marker_6dcee75a8fce619127b56031f75b993b.bindPopup(popup_085b0cfcf68a533771038d147aff53ff)
+        ;
+
+        
+    
+    
+            marker_6dcee75a8fce619127b56031f75b993b.bindTooltip(
+                `<div>
+                     Glazer Children's Museum (Tampa)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6924912f44da3873d7a60362f8eac3b4 = L.marker(
+                [27.9528, -82.4562],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_b7b20a6dd34ff9528b603f6b457ab2cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6924912f44da3873d7a60362f8eac3b4.setIcon(icon_b7b20a6dd34ff9528b603f6b457ab2cb);
+        
+    
+        var popup_685f93ee3c172bf0a71cee6656809d7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce9aa415081796285b492d101353f2cb = $(`<div id="html_ce9aa415081796285b492d101353f2cb" style="width: 100.0%; height: 100.0%;"><b>Emoji Art Museum (Tampa)</b><br><i>Category:</i> Tampa<br>Tampa International Airport (TPA): ≈ 15–20 min</div>`)[0];
+            popup_685f93ee3c172bf0a71cee6656809d7f.setContent(html_ce9aa415081796285b492d101353f2cb);
+        
+
+        marker_6924912f44da3873d7a60362f8eac3b4.bindPopup(popup_685f93ee3c172bf0a71cee6656809d7f)
+        ;
+
+        
+    
+    
+            marker_6924912f44da3873d7a60362f8eac3b4.bindTooltip(
+                `<div>
+                     Emoji Art Museum (Tampa)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f595b05b0534e0aec051c6e62ad5bc0 = L.marker(
+                [28.0567, -82.4137],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_dd1383161d0df0e5f5d5b429dd482ccf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1f595b05b0534e0aec051c6e62ad5bc0.setIcon(icon_dd1383161d0df0e5f5d5b429dd482ccf);
+        
+    
+        var popup_baf19a8275800ba77518361d922adaee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b79e6aa5af7b32ec9cf4302965d91d26 = $(`<div id="html_b79e6aa5af7b32ec9cf4302965d91d26" style="width: 100.0%; height: 100.0%;"><b>MOSI (Tampa)</b><br><i>Category:</i> Tampa<br>Tampa International Airport (TPA): ≈ 20 min</div>`)[0];
+            popup_baf19a8275800ba77518361d922adaee.setContent(html_b79e6aa5af7b32ec9cf4302965d91d26);
+        
+
+        marker_1f595b05b0534e0aec051c6e62ad5bc0.bindPopup(popup_baf19a8275800ba77518361d922adaee)
+        ;
+
+        
+    
+    
+            marker_1f595b05b0534e0aec051c6e62ad5bc0.bindTooltip(
+                `<div>
+                     MOSI (Tampa)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_67ce856cad5513cf091b16eb2039e2b1 = L.marker(
+                [27.9449, -82.4443],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_ca9a56ac8cca2a99d0cd218b45abc652 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_67ce856cad5513cf091b16eb2039e2b1.setIcon(icon_ca9a56ac8cca2a99d0cd218b45abc652);
+        
+    
+        var popup_799093ac4a83cbfd0db5f142d7fd4e09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_941422e9118f700486714d37db69d367 = $(`<div id="html_941422e9118f700486714d37db69d367" style="width: 100.0%; height: 100.0%;"><b>Florida Aquarium (Tampa)</b><br><i>Category:</i> Tampa<br>Tampa International Airport (TPA): ≈ 15–20 min</div>`)[0];
+            popup_799093ac4a83cbfd0db5f142d7fd4e09.setContent(html_941422e9118f700486714d37db69d367);
+        
+
+        marker_67ce856cad5513cf091b16eb2039e2b1.bindPopup(popup_799093ac4a83cbfd0db5f142d7fd4e09)
+        ;
+
+        
+    
+    
+            marker_67ce856cad5513cf091b16eb2039e2b1.bindTooltip(
+                `<div>
+                     Florida Aquarium (Tampa)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_02f97fdb2efcd0dbd24dd463b3c561f5 = L.marker(
+                [28.0125, -82.4627],
+                {}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            var icon_46796c6971d50498fece6b91a6cfc20a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_02f97fdb2efcd0dbd24dd463b3c561f5.setIcon(icon_46796c6971d50498fece6b91a6cfc20a);
+        
+    
+        var popup_a5d5d9ba231d30606bacd95648d1c1ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b42168581f6dc2d1c7c890a830bda869 = $(`<div id="html_b42168581f6dc2d1c7c890a830bda869" style="width: 100.0%; height: 100.0%;"><b>ZooTampa at Lowry Park</b><br><i>Category:</i> Tampa<br>Tampa International Airport (TPA): ≈ 20 min</div>`)[0];
+            popup_a5d5d9ba231d30606bacd95648d1c1ed.setContent(html_b42168581f6dc2d1c7c890a830bda869);
+        
+
+        marker_02f97fdb2efcd0dbd24dd463b3c561f5.bindPopup(popup_a5d5d9ba231d30606bacd95648d1c1ed)
+        ;
+
+        
+    
+    
+            marker_02f97fdb2efcd0dbd24dd463b3c561f5.bindTooltip(
+                `<div>
+                     ZooTampa at Lowry Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7ebc6a6cf8dedc8f6dfab811cfb9262f = L.polyline(
+                [[28.4312, -81.3081], [27.9891, -81.6901]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            poly_line_7ebc6a6cf8dedc8f6dfab811cfb9262f.bindTooltip(
+                `<div>
+                     MCO → Legoland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_896233f0c4999b4929d4f55a9c849fa4 = L.polyline(
+                [[27.9755, -82.5332], [27.9891, -81.6901]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_975d8d8903af879ab93b1d5b5c044fe5);
+        
+    
+            poly_line_896233f0c4999b4929d4f55a9c849fa4.bindTooltip(
+                `<div>
+                     TPA → Legoland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
